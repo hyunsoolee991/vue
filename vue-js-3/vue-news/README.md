@@ -1,24 +1,8 @@
-# vue-news
+template으로 slot을 설정할 경우
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+```html
+<div slot="username"></div>
+<template slot="time"></template>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- template 태그의 내용만 삽입된다.
