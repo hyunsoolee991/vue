@@ -41,22 +41,9 @@
 
 <script>
 export default {
-  created() {
-    const name = this.$route.name;
-    let actionName = "";
-    if (name === "news") actionName = "FETCH_NEWS";
-    else if (name === "ask") actionName = "FETCH_ASK";
-    else if (name === "jobs") actionName = "FETCH_JOBS";
-    this.$store.dispatch(actionName);
-  },
   computed: {
     listItems() {
-      const name = this.$route.name;
-      let state = "";
-      if (name === "news") state = this.$store.state.news;
-      else if (name === "ask") state = this.$store.state.ask;
-      else if (name === "jobs") state = this.$store.state.jobs;
-      return state;
+      return this.$store.state.list;
     },
   },
 };
